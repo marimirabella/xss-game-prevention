@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Internal game scripts/styles, mostly boring stuff -->
+    <script src="https://xss-game.appspot.com/static/game-frame.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/1.0.10/purify.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://xss-game.appspot.com/static/game-frame-styles.css"
+    />
+  </head>
+  <script>
+    window.onload = function() {
+      var link = document.getElementById("next");
+      DOMPurify.sanitize(link, { IN_PLACE: true });
+    };
+  </script>
+
+  <body id="level5">
+    <img
+      src="https://xss-game.appspot.com/static/logos/level5.png"
+    /><br /><br />
+    <!-- We're ignoring the email, but the poor user will never know! -->
+    Enter email: <input id="reader-email" name="email" value="" />
+
+    <br /><br />
+    <a id="next" href="{{ next }}">Next >></a>
+  </body>
+</html>
